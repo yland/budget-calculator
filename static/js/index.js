@@ -19,9 +19,8 @@
               
               for ( var i = 0, l = incomelist.length; i < l; i++ ) {
                   income = incomelist[ i ];
+                  
                   for (let key in income){
-                    //console.log('key in Income:', key)
-                    //console.log('value in Income:', income[key])
                     $('#inc-table').append($(
                     $.map(income[key], function(amt, description){
                       return '<tr><td>'+description+'</td><td>'+amt+'</td><td><button type="button" <button onclick="delete_inc('+key+')" id="delete-inc">'+'Remove'+'</button></td></tr>'
@@ -43,7 +42,7 @@
                   }
                 
                 }
-            } //End Success function 
+            }//End Success function 
                 
           });
         };

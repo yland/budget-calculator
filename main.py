@@ -5,7 +5,6 @@ from flask_cors import CORS, cross_origin
 from flask_sqlalchemy import SQLAlchemy
 from models.models import Income, Expense, db
 from app import create_app
-import pymysql
 
 app = create_app()
 CORS(app, support_credentials=True)
@@ -57,7 +56,6 @@ def delete_income():
             db.session.commit()
             return jsonify({'Action': 'Deleted!'})
     return jsonify({"Error": "Wrong method"})
-
 
 @app.route('/delete_expense', methods=['DELETE']) 
 def delete_expense():
