@@ -75,10 +75,12 @@ def delete_expense():
 def get_result():
     inc = []
     exp = []
-#List of dics
+    
+    #List of dics
     inc_list = []
     exp_list = []
-#Query objects
+    
+    #Query objects
     income = Income.query.all()
     expense = Expense.query.all()
     
