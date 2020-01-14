@@ -3,10 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>calculate budget</title>
-    
+     <!-- Styles -->
     <link rel= "stylesheet" type = "text/css" href= "{{ url_for('static',filename='css/bootstrap.min.css') }}">
     <link rel= "stylesheet" type = "text/css" href= "{{ url_for('static',filename='css/bootstrap-grid.min.css') }}">
     <link rel= "stylesheet" type = "text/css" href= "{{ url_for('static',filename='css/custom.css') }}">
+    <link rel= "stylesheet" type = "text/css" href= "{{ url_for('static',filename='css/fontawesome.min.css') }}">
+    <link rel= "stylesheet" type = "text/css" href= "{{ url_for('static',filename='css/all.min.css') }}">
+    <link rel= "stylesheet" type = "text/css" href= "{{ url_for('static',filename='css/brands.min.css') }}">
+    
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
  </head>
   <body>
@@ -62,30 +67,47 @@
             </div> <!-- Modal content-->
           </div> <!-- Modal Dialog-->
         </div> <!-- Modal fade-->
-
       </div> <!-- Modals -->
-      
 
-      <div class= "income-input"> 
-        <h2>Your Income</h2>
-        <table id="inc-table" class="table table-hover table-dark">
-          <tr id="row1">
-            <th>Income</th> 
-            <th colspan="2">Amount</th> 
-          </tr>
-        </table>
+      <div class="content mb-5">
+        <div class="tables px-5 py-1">
+          <div class= "income-input"> 
+            <h3>Income</h3>
+            <table id="inc-table" class="table table-md table-hover table-dark">
+              <tr id="row1">
+                <th>Income</th> 
+                <th colspan="2">Amount</th> 
+              </tr>
+            </table>
+          </div>
+          <div class = "expense-input">
+            <h3>Expense</h3>
+            <table id="exp-table" class="table table-hover table-dark">
+              <tr id="row2">
+                <th>Expense</th> 
+                <th colspan="2">Amount</th>        
+              </tr>
+            </table>  
+          </div>
+         </div> <!-- Tables -->
+        <div class="saving px-5"><h3>Saving</h3></div>
+      </div><!-- Content -->
+    </div><!-- Container -->
+      
+    <!-- Footer -->            
+    <footer class="page-footer font-small pt-4 mt-5">
+      <div class="container">
+        
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+          <div><p>Copyright ©2020 All rights reserved | Made by <a href="#">yland</a></p></div>
+        </div>
+      
       </div>
-      <div class = "expense-input">
-        <h2>Your Expense</h2>
-        <table id="exp-table" class="table table-hover table-dark">
-          <tr id="row2">
-            <th>Expense</th> 
-            <th colspan="2">Amount</th>        
-          </tr>
-        </table>  
-      </div>
-      <div class="saving "><h2><b>Saving</b></h2></div>
-    </div>
+    </footer>
+
+    
+    
   </body>
   
   <script type="text/javascript" src= "{{ url_for('static', filename = 'js/index.js') }}"></script>

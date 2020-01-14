@@ -13,7 +13,7 @@ getData = function () {
     dataType: 'json',
     success: function (data) {
       console.log(data['saving']);
-      $('.saving').append('<strong>' + data["saving"] + '</strong>')
+      $('.saving').append('<strong>' + data["saving"] + 'CFA' + '</strong>')
       var incomelist = data["income"];
       var expenselist = data["expense"];
 

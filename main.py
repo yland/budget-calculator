@@ -22,8 +22,11 @@ def add_income():
         amt = data['amt']
         
         if inc and amt:
-            print('added!')
-            db.session.add(Income(description= inc, amount= amt))
+            #Capitalizing the first letter of income string
+            cap_inc = inc.capitalize()            
+            print(cap_inc)
+
+            db.session.add(Income(description= cap_inc, amount= amt))
             db.session.commit()
             return jsonify({inc:amt})
         
@@ -37,7 +40,10 @@ def add_expense():
         exp = data['exp']
         amt = data['amt']
         if exp and amt:
-            db.session.add(Expense(exp_description = exp, exp_amount= amt))
+            #Capitalizing the first letter of expense string
+            cap_exp = exp.capitalize()
+
+            db.session.add(Expense(exp_description = cap_exp, exp_amount= amt))
             db.session.commit()
             return jsonify({exp:amt})
 
