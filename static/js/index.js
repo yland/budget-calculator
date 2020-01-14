@@ -2,9 +2,9 @@
 // getting data from server
 getData = function () {
 
-  $('#inc-table td').empty();
-  $('#exp-table td').empty();
-  $('.saving strong').empty();
+  $("#inc-table td").css("display", "none");
+  $('#exp-table td').css("display", "none");
+  $('.saving strong').css("display", "none");
 
   $.ajax({
     type: 'GET',
