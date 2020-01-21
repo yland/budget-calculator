@@ -1,4 +1,4 @@
-# A simple Flast application to calculate and deduct expenses from income.
+# A simple Flask application to calculate and deduct expenses from income.
 
 from flask import Flask, jsonify, request, json, redirect, render_template
 from flask_cors import CORS, cross_origin
