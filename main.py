@@ -49,7 +49,7 @@ def add_expense():
 
     return redirect('/')
 
-#Deleting from Expense Table
+#Deleting from Income Table
 @app.route('/delete_income', methods=['DELETE']) 
 def delete_income():
     if request.method == 'DELETE':
@@ -63,6 +63,8 @@ def delete_income():
             return jsonify({'Action': 'Deleted!'})
     return jsonify({"Error": "Wrong method"})
 
+
+#Deleting from Expense Table
 @app.route('/delete_expense', methods=['DELETE']) 
 def delete_expense():
     if request.method == 'DELETE':
